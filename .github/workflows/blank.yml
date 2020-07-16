@@ -45,7 +45,7 @@ jobs:
 
         echo "\n Post Message in Sc-chat \n";
         aliasName="SECURITY";
-        chanelname="04-sc-dept-tech-dev"; # speed-team 04-sc-dept-tech-dev
+        chanelname="speed-team"; # speed-team 04-sc-dept-tech-dev
         message="Result output:  *success* 2";
 
         body()
