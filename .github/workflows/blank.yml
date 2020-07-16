@@ -29,37 +29,4 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        computerName=`hostname`;
-        UserName=`whoami`;
-        postMessage="# Run from *$UserName@$computerName *\n=======================================\n";
-        echo "Category 1: Not open on any IP"
-        postMessage="$postMessage ## Category 1: *Not open on any IP* \n\`\`\`";
-        
-        postMessage="$postMessage Run code from Github \n";
-        echo "Category 2: Only open on trusted IP";
-        postMessage="$postMessage\`\`\` ## Category 2: *Only open on trusted IP* \n\`\`\`";
-
-        postMessage="$postMessage Run code from Github \n";
-        postMessage="$postMessage \`\`\`";
-        # echo "$postMessage";
-
-        echo "\n Post Message in Sc-chat \n";
-        aliasName="SECURITY";
-        chanelname="speed-team"; # speed-team 04-sc-dept-tech-dev
-        message="Result output:  *success* 2";
-
-        body()
-        {
-        cat <<EOF
-        {
-            "alias": "$aliasName", 
-            "channel": "$chanelname", 
-            "text": "$postMessage"
-        } 
-        EOF
-        }
-
-        # curlRequest=`curl -v -k -H 'Content-Type: application/json' -d '{"alias":"SECURITY", "channel":"speed-team", "text":"Result output:  *success*"}' http://72.52.93.10:3000/hooks/D8jbQDfFCdHXP2gbE/pQt3iYPoDbARqK3bCsciWRxqErG7tJv9afYZC3r8ZgMTsh9h`;
-
-        curlRequest=`curl -v -k -H 'Content-Type: application/json' -d "$(body)" http://72.52.93.10:3000/hooks/D8jbQDfFCdHXP2gbE/pQt3iYPoDbARqK3bCsciWRxqErG7tJv9afYZC3r8ZgMTsh9h`;
-        echo "$curlRequest";
+        sh run-all-checks.sh

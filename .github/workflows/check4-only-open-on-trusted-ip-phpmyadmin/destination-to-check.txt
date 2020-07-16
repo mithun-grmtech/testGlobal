@@ -1,0 +1,2 @@
+https://www.hct.ai/v3/app/phpmyadmin/
+https://staging.savantcare.com/v3/app/phpmyadmin/
