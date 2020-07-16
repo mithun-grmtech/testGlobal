@@ -35,9 +35,11 @@ jobs:
         echo "Category 1: Not open on any IP"
         postMessage="$postMessage ## Category 1: *Not open on any IP* \n\`\`\`";
         
+        postMessage="$postMessage Run code from Github \n";
         echo "Category 2: Only open on trusted IP";
         postMessage="$postMessage\`\`\` ## Category 2: *Only open on trusted IP* \n\`\`\`";
 
+        postMessage="$postMessage Run code from Github \n";
         postMessage="$postMessage \`\`\`";
         # echo "$postMessage";
 
